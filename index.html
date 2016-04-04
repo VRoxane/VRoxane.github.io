@@ -20,6 +20,16 @@
 		    				Roxane VEISSIERE
 		    			</h1>
 		    			<h2>Designer web CSS3 HTML5 jQuery, UX Lover, PHP Curious ...</h2>
+
+		    					    					<p><a data-toggle="exampleModal8">Click me for a full-screen modal</a></p>
+
+<div class="full reveal" id="exampleModal8" data-reveal>
+  <p>OH I'M SO FUUUUL</p>
+  <img src="http://placekitten.com/1920/1280" alt="Intropsective Cage">
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 		    		</div>
 		    	</div>
 		    	<div class="row stronger">
@@ -75,7 +85,7 @@
 		    					<a class="button" href="#">Visiter le site</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/villaalizee.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -93,7 +103,7 @@
 		    					<a class="button" data-toggle="modal_mediaco">Voir la maquette</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/mediaco.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -111,7 +121,7 @@
 		    					<a class="button" href="#">Visiter le site</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/creperie.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -129,7 +139,7 @@
 		    					<a class="button" href="#">Visiter le site</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/locasail.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -144,10 +154,9 @@
 		    					Docteur SAGUI
 		    				</h1>
 		    					<p>Médecine esthétique</p>
-		    					<a class="button" data-toggle="modal_mediaco">Voir la maquette</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/sagui.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -167,7 +176,7 @@
 		    					<a class="button" href="#">Visiter le site</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/leroy.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -185,7 +194,7 @@
 		    					<a class="button" href="#">Visiter le site</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/montsalva.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -203,7 +212,7 @@
 		    					<a class="button" href="#">Visiter le site</a>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/roqueforcade.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -264,7 +273,7 @@
 		    					<p>Déménagements à l'international</p>
 		    			</div>
 		    			<div class="large-8 columns">
-							<video width="100%" autoplay mute loop>
+							<video width="100%" autoplay muted loop>
 							<source src="assets/video/demmed_pictos.mp4" type="video/mp4">
 							Your browser does not support HTML5 video.
 							</video>
@@ -306,11 +315,17 @@
 		</div>
 	    <script src="bower_components/foundation/js/vendor/jquery.js"></script>
 	    <script src="bower_components/foundation/js/foundation.js"></script>
+	    <script src="bower_components/foundation/js/foundation/foundation.core.js"></script>
+	    <script src="bower_components/foundation/js/foundation/foundation.util.keyboard.js"></script>
+	    <script src="bower_components/foundation/js/foundation/foundation.util.box.js"></script>
+	    <script src="bower_components/foundation/js/foundation/foundation.util.triggers.js"></script>
+	    <script src="bower_components/foundation/js/foundation/foundation.util.mediaQuery.js"></script>
+	    <script src="bower_components/foundation/js/foundation/foundation.util.motion.js"></script>
 		<script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>
 	    <script>
-	      $(document).foundation();
+			$(document).foundation();
 			$(document).ready(function() {
-				$('#fullpage').fullpage();
+			$('#fullpage').fullpage();
 			});
 	    </script>
   </body>
