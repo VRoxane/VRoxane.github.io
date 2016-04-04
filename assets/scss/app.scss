@@ -28,6 +28,31 @@ $color3: lighten(#000, 40);
 body {
 	font-family: Libre;
 }
+a, a:hover { color: inherit; }
+a:not(.button):hover, a:not(.button):focus, a:not(.button):active { text-decoration: underline; color: inherit !important; }
+#nav {
+	transition: all 0.3s ease-in;
+	position: fixed;
+	opacity: 0;
+	padding: 5px;
+	z-index: 999;
+	width: 100%;
+	background-color: #fff;
+	&.open {
+		opacity: 1;
+		transition: all 0.3s ease-in;
+	}
+	*:not(div) {
+		display: inline-block;
+		font-size: 14px;
+		margin: 0 15px 0 0;
+		line-height: 22px;
+	}
+	.right {
+		font-family: Gotham;
+		margin-right: 0;
+	}
+}
 h1 {
 	font-family: Gotham;
 	color: $color1;
@@ -51,13 +76,15 @@ p {
 	margin-bottom: 8px;
 }
 section {
-		background-size: cover;
+	position: relative;
 	h1 {
+		margin-top: 40px;
 		small, strong {display: block;}
 	}
 	.row.ghostlike {
 		padding: 40px 30px;
 	}
+	.button { margin-top: 30px;}
 }
 #CV {
 	i {
@@ -66,6 +93,9 @@ section {
 	}
 	a { border-bottom: none;}
 }
+#leroy, #montsalva, #roque, #alizee, #creperie, #mediaco, #sagui, #locasail, #hacienda, #growback, #demmed, #demmed_2, #littoral, #coiffet, #hiber {
+	background-size: cover !important;
+}
 #leroy {	background: url(../images/bg_leroy.jpg) no-repeat;}
 #montsalva {	background: url(../images/bg_montsalva.jpg) no-repeat;}
 #roque {	background: url(../images/bg_roque.jpg) no-repeat;}
@@ -73,8 +103,16 @@ section {
 #creperie {	background: url(../images/bg_creperie.jpg) no-repeat;}
 #mediaco {	background: url(../images/bg_mediaco.jpg) no-repeat;}
 #sagui {	background: url(../images/bg_sagui.jpg) no-repeat;}
+#locasail {	background: url(../images/bg_locasail.jpg) no-repeat;}
+#hacienda {	background: url(../images/bg_hacienda.jpg) no-repeat;}
+#growback { background-color: lighten(#00b0fe, 45); }
+#demmed, #demmed_2 {	background: url(../images/bg_demmed.jpg) no-repeat;}
+#littoral {	background: url(../images/bg_littoralalu.jpg) no-repeat;}
+#coiffet {	background: url(../images/bg_coiffet.jpg) no-repeat;}
+#hiber { background-color: lighten(#fb8018, 40); img { height: 350px } }
 
 
+#photo_2 img { height: 350px}
 .row {
 	max-width: 1200px;
 	.row { max-width: 980px }
@@ -93,10 +131,20 @@ a:not(.button) {
   background: rgba(#fff, 0.9);
   border: none;
 }
+.dark {
+	background-color: $color1;
+	* { color: $color2; }
+	.ghostlike {
+		background: lighten($color1, 5);
+		small { opacity: 0.35}
+	}
+}
+/*
+
 #whitebg .ghostlike {
 	background-color: darken(#fff,3);
 	img { background-color: #fff; padding: 15px}
-}
+}*/
 $h-gap : 5; // Gap pour les Margin
 @for $i from 0 through 10{
     .m-#{$i*$h-gap} {margin: #{$i*$h-gap}px;}
@@ -109,4 +157,17 @@ $h-gap : 5; // Gap pour les Margin
     .pb-#{$i*$h-gap} {padding-bottom: #{$i*$h-gap}px;}
     .pl-#{$i*$h-gap} {padding-left: #{$i*$h-gap}px;}
     .pr-#{$i*$h-gap} {padding-right: #{$i*$h-gap}px;}
+}
+button, .button {
+	background-color: transparent;
+	border: 3px solid $color2;
+	font-family: Gotham;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: $color1;
+	&:hover, &:focus {
+		background-color:$color1;
+		border-color:$color1;
+		color: $color3;
+	}
 }
