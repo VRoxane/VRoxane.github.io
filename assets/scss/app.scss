@@ -1,0 +1,112 @@
+@import url(../../bower_components/foundation/scss/foundation);
+
+$color1: lighten(#000, 10);
+$color2: lighten(#000, 70);
+$color3: lighten(#000, 40);
+
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/GothamBold.eot');
+    src: url('../fonts/GothamBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamBold.woff') format('woff'),
+         url('../fonts/GothamBold.ttf') format('truetype'),
+         url('../fonts/GothamBold.svg#Gotham') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Libre';
+    src: url('../fonts/LibreBaskerville-Italic.eot');
+    src: url('../fonts/LibreBaskerville-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LibreBaskerville-Italic.woff') format('woff'),
+         url('../fonts/LibreBaskerville-Italic.ttf') format('truetype'),
+         url('../fonts/LibreBaskerville-Italic.svg#Libre') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	font-family: Libre;
+}
+h1 {
+	font-family: Gotham;
+	color: $color1;
+	line-height: 1.2em;
+	small {
+		font-family: Gotham;
+		display: block;
+		color: $color2;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		line-height: 0.6em;
+	}
+}
+h2 {
+	font-family: Libre;
+	font-size: 22px;
+	color: $color3;
+}
+p {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+section {
+		background-size: cover;
+	h1 {
+		small, strong {display: block;}
+	}
+	.row.ghostlike {
+		padding: 40px 30px;
+	}
+}
+#CV {
+	i {
+		position: relative;
+		top: 3px;
+	}
+	a { border-bottom: none;}
+}
+#leroy {	background: url(../images/bg_leroy.jpg) no-repeat;}
+#montsalva {	background: url(../images/bg_montsalva.jpg) no-repeat;}
+#roque {	background: url(../images/bg_roque.jpg) no-repeat;}
+#alizee {	background: url(../images/bg_alizee.jpg) no-repeat;}
+#creperie {	background: url(../images/bg_creperie.jpg) no-repeat;}
+#mediaco {	background: url(../images/bg_mediaco.jpg) no-repeat;}
+#sagui {	background: url(../images/bg_sagui.jpg) no-repeat;}
+
+
+.row {
+	max-width: 1200px;
+	.row { max-width: 980px }
+}
+.stronger {
+	color: $color1;
+	*:not(i) { font-family: Gotham; color: $color1;}
+}
+.faded {
+	&, & * { color: $color2; }
+}
+a:not(.button) {
+	text-decoration: none;
+}
+.ghostlike {
+  background: rgba(#fff, 0.9);
+  border: none;
+}
+#whitebg .ghostlike {
+	background-color: darken(#fff,3);
+	img { background-color: #fff; padding: 15px}
+}
+$h-gap : 5; // Gap pour les Margin
+@for $i from 0 through 10{
+    .m-#{$i*$h-gap} {margin: #{$i*$h-gap}px;}
+    .mt-#{$i*$h-gap} {margin-top: #{$i*$h-gap}px;}
+    .mb-#{$i*$h-gap} {margin-bottom: #{$i*$h-gap}px;}
+    .ml-#{$i*$h-gap} {margin-left: #{$i*$h-gap}px;}
+    .mr-#{$i*$h-gap} {margin-right: #{$i*$h-gap}px;}
+    .p-#{$i*$h-gap} {padding: #{$i*$h-gap}px;}
+    .pt-#{$i*$h-gap} {padding-top: #{$i*$h-gap}px;}
+    .pb-#{$i*$h-gap} {padding-bottom: #{$i*$h-gap}px;}
+    .pl-#{$i*$h-gap} {padding-left: #{$i*$h-gap}px;}
+    .pr-#{$i*$h-gap} {padding-right: #{$i*$h-gap}px;}
+}
